@@ -28,13 +28,7 @@ function showTypingIndicator() {
 function addMessage(userMessage) {
     const typingIndicator = document.getElementById('typingIndicator');
     try {
-        fetch("/getData", {
-            method : 'POST',
-            headers:{
-            'Content-Type':'application/json'
-        }, 
-            body: JSON.stringify({"message" : userMessage})
-        })
+        fetch(`http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=1&msg=${userMessage}`)
         .then(response => response.json())
         .then(data => {
             if (typingIndicator) {
