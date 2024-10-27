@@ -6,7 +6,7 @@ function sendMessage() {
     if (userMessage) {
         const userMessageDiv = document.createElement('div');
         userMessageDiv.className = 'message sent';
-        userMessageDiv.innerHTML = `<img src="/static/images/user.png" alt="User"> ${userMessage}`;
+        userMessageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8yZZf.1000040037.png" alt="User"> ${userMessage}`;
         chatContainer.appendChild(userMessageDiv);
         chatContainer.scrollTop = chatContainer.scrollHeight;
         const newMessage = messageInput.value;
@@ -19,7 +19,7 @@ function sendMessage() {
 function showTypingIndicator() {
     const typingIndicator = document.createElement('div');
     typingIndicator.className = 'message received typing-indicator';
-    typingIndicator.innerHTML = `<img src="/static/images/bot.png" alt="Bot"> typing...`;
+    typingIndicator.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png" alt="Bot"> typing...`;
     typingIndicator.id = 'typingIndicator';
     chatContainer.appendChild(typingIndicator);
     chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -36,7 +36,7 @@ function addMessage(userMessage) {
             }
             const messageDiv = document.createElement('div');
             messageDiv.className = 'message received';
-            messageDiv.innerHTML = `<img src="/static/images/bot.png"> ${data.cnt}`;
+            messageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png"> ${data.cnt}`;
             chatContainer.appendChild(messageDiv);
             chatContainer.scrollTop = chatContainer.scrollHeight;
         })
