@@ -41,7 +41,7 @@ function addMessage(userMessage) {
             chatContainer.scrollTop = chatContainer.scrollHeight;
         })
         .catch(error => {
-            alert("error");
+            alert(error);
             console.log(error);
         })
         
