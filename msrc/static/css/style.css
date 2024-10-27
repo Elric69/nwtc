@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url("../images/background.png") no-repeat center center fixed;
+    background: url("https://i.im.ge/2024/10/27/k8yyZh.1000040034.jpeg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     width: 90%;
     max-width: 400px;
     height: 80vh;
-    background: url('../images/chatbackground.png') no-repeat center center;
+    background: url('https://i.im.ge/2024/10/27/k8y3B4.1000040035.jpeg') no-repeat center center;
     background-size: cover;
     border-radius: 10px;
     display: flex;
