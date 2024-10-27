@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-Chat Simulation</title>
+    <link rel="stylesheet" href = "{{url_for('static', filename = 'css/style.css')}}">
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class = "header">
+        <span>
+            <i class="fa fa-code" aria-hidden="true" onclick = "window.open('https://google.com', '_blank')"></i>
+        </span>
+    </div>
+    <div class="chat-container">
+        <div class="messages" id="chatContainer">
+        </div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()"> Send </button>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename = 'js/chat.js')}}"></script>
+</body>
+</html>
