@@ -27,7 +27,7 @@ function showTypingIndicator() {
 
 function addMessage(userMessage) {
     const typingIndicator = document.getElementById('typingIndicator');
-    fetch(`/getData?mes=${userMessage}`)
+    fetch(`/getData?mes=${encodeURIComponent(userMessage)}`)
         .then(response => response.json())
         .then(data => {
             if (typingIndicator) {
@@ -40,7 +40,6 @@ function addMessage(userMessage) {
             chatContainer.scrollTop = chatContainer.scrollHeight;
         })
         .catch(error => {
-            alert(error);
             console.log(error);
         })
 }
