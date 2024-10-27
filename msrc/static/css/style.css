@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 400px;
+    height: 80vh;
+    background: url('../images/chatbackground.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    padding: 0;
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    right: 10px;
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 10px;
+    color: black;
+}
+
+.header span{
+    background-color: rgba(160, 153, 153, 0.8);
+    border-radius: 5px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.message.sent {
+    color: #fff;
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message.received {
+    color: #fff;
+    align-self: flex-start;
+}
+
+.message img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message.sent img {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-top: 1px solid #333;
+    align-items: center;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-container input::placeholder {
+    color: #888;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #888;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
