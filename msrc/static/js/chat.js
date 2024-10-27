@@ -27,8 +27,7 @@ function showTypingIndicator() {
 
 function addMessage(userMessage) {
     const typingIndicator = document.getElementById('typingIndicator');
-    try {
-        fetch(`/getData?mes=${userMessage}`)
+    fetch(`/getData?mes=${userMessage}`)
         .then(response => response.json())
         .then(data => {
             if (typingIndicator) {
@@ -44,12 +43,6 @@ function addMessage(userMessage) {
             alert(error);
             console.log(error);
         })
-        
-    } catch (error) {
-        console.log(error);
-    }
-
-
 }
 
 messageInput.addEventListener('keypress', function (event) {
