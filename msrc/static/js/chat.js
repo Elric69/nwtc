@@ -28,7 +28,7 @@ function showTypingIndicator() {
 function addMessage(userMessage) {
     const typingIndicator = document.getElementById('typingIndicator');
     try {
-        fetch(`http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=1&msg=${encodeURIComponent(userMessage)}`)
+        fetch(`http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=1&msg=${encodeURIComponent(userMessage)}`,{ method: 'GET' })
         .then(response => response.json())
         .then(data => {
             if (typingIndicator) {
