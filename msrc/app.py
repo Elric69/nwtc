@@ -22,7 +22,7 @@ def fetch():
         response = res.json()
         return jsonify(response)
     except:
-        return jsonify({"cnt" : "error"})
+        print("error")
 
 
 if __name__ == "__main__":
