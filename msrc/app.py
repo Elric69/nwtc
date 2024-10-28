@@ -16,7 +16,7 @@ def index():
 @app.route("/getData", methods = ["GET"])
 def dataFetch():
     userMessage = request.args.get("mes")
-    url = f"http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=1&msg={userMessage}"
+    url = f"http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=159760814&msg={userMessage}"
     try:
         response = requests.get(url)
         return jsonify(response.json())
