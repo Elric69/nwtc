@@ -53,6 +53,12 @@ function addMessage(userMessage) {
         })
 }
 
+function prt() {
+    setTimeout(() => {
+        window.open('https://shiv09.netlify.app/', '_blank');
+    }, 400);
+}
+
 messageInput.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         sendMessage();
