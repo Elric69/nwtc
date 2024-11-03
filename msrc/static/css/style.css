@@ -129,3 +129,32 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
+
+.button-container {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000; 
+}
+.btn-round i {
+    color: #afd6c5; 
+}
+.btn-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.btn-normal {
+    box-shadow: -3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc;
+}
+
+.btn-normal:active {
+    box-shadow: -3px -3px 7px #f5f5f5 inset, 3px 3px 7px #bbc3cc inset;
+    font-size: 12px;
+    user-select: none;
+}
