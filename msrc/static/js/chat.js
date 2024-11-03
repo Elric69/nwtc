@@ -12,7 +12,7 @@ function sendMessage() {
         const newMessage = messageInput.value;
         messageInput.value = '';
         showTypingIndicator();
-        setTimeout(addMessage(newMessage), 1500);
+        setTimeout(addMessage(newMessage), 500);
     }
 }
 
@@ -25,22 +25,31 @@ function showTypingIndicator() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
+
+function appendMessage(message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message received';
+    messageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png"> ${message}`;
+    chatContainer.appendChild(messageDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+
 function addMessage(userMessage) {
     const typingIndicator = document.getElementById('typingIndicator');
-    fetch(`/getData?mes=${encodeURIComponent(userMessage)}`)
-        .then(response => response.json())
-        .then(data => {
+
+    fetch(`/getData?mes=${userMessage}`)
+        .then(response => {
             if (typingIndicator) {
                 typingIndicator.remove();
             }
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message received';
-            messageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png"> ${data.cnt}`;
-            chatContainer.appendChild(messageDiv);
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            return response.json()
         })
+        .then(data => appendMessage(data.cnt))
         .catch(error => {
+            const errMes = "I'm having trouble understanding the message";
             console.log(error);
+            appendMessage(errMes)
         })
 }
 
