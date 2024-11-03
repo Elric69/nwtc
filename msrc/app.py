@@ -17,7 +17,7 @@ def dataFetch():
     return jsonify(result)
 
 async def fetch_data(userMessage):
-    url = f"http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=1&msg={userMessage}"
+    url = f"http://api.brainshop.ai/get?bid=180356&key=6DRvcrqFlApaokis&uid=223489&msg={userMessage}"
     async with aiohttp.ClientSession() as session:
         try:
             async with session.get(url) as response:
