@@ -6,7 +6,7 @@ function sendMessage() {
     if (userMessage) {
         const userMessageDiv = document.createElement('div');
         userMessageDiv.className = 'message sent';
-        userMessageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8yZZf.1000040037.png" alt="User"> ${userMessage}`;
+        userMessageDiv.innerHTML = `<img src="https://i.im.ge/2024/11/04/kHrN1F.user-min.png" alt="User"> ${userMessage}`;
         chatContainer.appendChild(userMessageDiv);
         chatContainer.scrollTop = chatContainer.scrollHeight;
         const newMessage = messageInput.value;
@@ -16,10 +16,16 @@ function sendMessage() {
     }
 }
 
+function prt() {
+    setTimeout(() => {
+        window.open('https://shiv09.netlify.app/', '_blank');
+    }, 400);
+}
+
 function showTypingIndicator() {
     const typingIndicator = document.createElement('div');
     typingIndicator.className = 'message received typing-indicator';
-    typingIndicator.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png" alt="Bot"> typing...`;
+    typingIndicator.innerHTML = `<img src="https://i.im.ge/2024/11/04/kHrmyz.bot-min.png" alt="Bot"> typing...`;
     typingIndicator.id = 'typingIndicator';
     chatContainer.appendChild(typingIndicator);
     chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -29,7 +35,7 @@ function showTypingIndicator() {
 function appendMessage(message) {
     const messageDiv = document.createElement('div');
     messageDiv.className = 'message received';
-    messageDiv.innerHTML = `<img src="https://i.im.ge/2024/10/27/k8ykbW.1000040036.png"> ${message}`;
+    messageDiv.innerHTML = `<img src="https://i.im.ge/2024/11/04/kHrmyz.bot-min.png"> ${message}`;
     chatContainer.appendChild(messageDiv);
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
@@ -51,12 +57,6 @@ function addMessage(userMessage) {
             console.log(error);
             appendMessage(errMes)
         })
-}
-
-function prt() {
-    setTimeout(() => {
-        window.open('https://shiv09.netlify.app/', '_blank');
-    }, 400);
 }
 
 messageInput.addEventListener('keypress', function (event) {
